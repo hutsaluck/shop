@@ -11,11 +11,17 @@ class Product extends Model
 
     protected $fillable = ['title', 'slug', 'description', 'price', 'barcode', 'stock', 'cover'];
 
+    /*
+     *  @return mixed
+     */
     public function categories()
     {
         return $this->belongsToMany(Category::class);
     }
 
+    /*
+     *  @return mixed
+     */
     public function gallery()
     {
         return $this->hasOne(Gallery::class);
