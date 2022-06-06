@@ -21,6 +21,6 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\PageController::class, 'index'])->name('index');
 
-Route::resource('catalog', App\Http\Controllers\PageController::class)->parameters([
+Route::resource('catalog', App\Http\Controllers\CatalogController::class)->parameters([
     'catalog' => 'slug'
 ]);
